@@ -1,0 +1,44 @@
+[project]
+name = "lgpd-rag"
+version = "0.1.0"
+description = "Aplicação RAG jurídica para auxílio a temas da LGPD"
+authors = [
+    {name = "André Rizzo - andrerizzo@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.poetry] 
+packages = [{ include = "src" }]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# Grupo de produção principal (usado por todos)
+[tool.poetry.dependencies]
+python = ">=3.12,<3.13"
+langchain = "*"
+openai = "*"
+dotenv = "*"
+langchain_community = "*"
+langchain_core = "*"
+langchain_openai = "*"
+faiss-cpu = "*"
+
+
+# Backend
+langchain-huggingface = "^0.2.0"
+streamlit = "^1.45.1"
+pydantic = "^2.11.5"
+fastapi = "^0.115.12"
+[tool.poetry.group.backend.dependencies]
+fastapi = "*"
+uvicorn = "*"
+
+# Frontend
+[tool.poetry.group.frontend.dependencies]
+streamlit = "*"
+requests = "*"

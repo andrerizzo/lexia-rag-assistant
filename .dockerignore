@@ -1,0 +1,34 @@
+# Ambientes virtuais
+.venv/
+env/
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Git
+.git/
+.gitignore
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+
+# Configuração pessoal
+*.env
+*.DS_Store
+.vscode/
+.idea/
+
+# Dados e artefatos
+data/
+
+# Outros diretorios
+docs/
+notebooks/
+tests/
+scripts/
+
+README.md
+template.pyc
