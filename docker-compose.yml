@@ -1,2 +1,35 @@
 # Configuration file
-version: ""
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: lgpd-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app/backend:/app/backend
+      - ./app/src:/app/src
+      - ./data/vectorstore:/app/vectorstore  # Volume externo para FAISS
+    env_file:
+      - .env
+    restart: always
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: lgpd-frontend
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./app/frontend:/app/frontend
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  vectorstore_data:
+    external: false
