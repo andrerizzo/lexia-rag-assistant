@@ -24,5 +24,6 @@ docs/
 tests/
 
 pytest.ini
+template.py
 
 

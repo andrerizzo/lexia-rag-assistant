@@ -122,7 +122,7 @@ curl -X POST http://localhost:8000/rag \
 
 ## 📞 Contato
 
-**André Rizzo — Cientista de Dados Sênior**
-📧 andrerizzo@gmail.com
-💼 LinkedIn: https://linkedin.com/in/andrerizzo1
+**André Rizzo — Cientista de Dados Sênior**  
+📧 andrerizzo@gmail.com  
+💼 LinkedIn: https://linkedin.com/in/andrerizzo1  
 🐙 GitHub: https://github.com/andrerizzo
